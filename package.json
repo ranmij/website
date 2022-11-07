@@ -1,0 +1,17 @@
+{
+  "name": "philtravel",
+  "version": "1.0.0",
+  "description": "philtravel websys project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:assets/css"
+  },
+  "author": "Jomari Tenorio",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "bootstrap": "^5.2.2",
+    "jquery": "^3.6.1",
+    "sass": "^1.55.0"
+  }
+}
