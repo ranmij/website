@@ -1,6 +1,6 @@
 let mobile = false;
 if ($(document).innerWidth < 800) {
-    $('.navbar').addClass('bg-dark');
+    $('.navbar').addClass('bg-dark')
 }
 
 // TO KEEP TRACK OF THE CURRENT DOT
@@ -56,22 +56,22 @@ jQuery(function() {
     setInterval(()=> {
         if (current === 0) {
             if (is_done) {
-                container.animate({"left": "-100%"}, "slow", complete=current_dot(dots, 0, 1));
+                $(container).animate({"left": "-100%"}, "slow", complete=current_dot(dots, 0, 1));
                 current += -100;
             } else {
-                container.animate({"left": "0%"}, "slow", complete=current_dot(dots, 1, 0));
+                $(container).animate({"left": "0%"}, "slow", complete=current_dot(dots, 1, 0));
                 is_done = true;
             }
         } else if (current === -100) {
             if (!is_done) {
-                container.animate({"left": "-200%"}, "slow", complete=current_dot(dots, 1, 0));
+                $(container).animate({"left": "-200%"}, "slow", complete=current_dot(dots, 1, 0));
                 current += -100;
             } else {
-                container.animate({"left": "-200%"}, "slow", complete=current_dot(dots, 1, 2));
+                $(container).animate({"left": "-200%"}, "slow", complete=current_dot(dots, 1, 2));
                 current += -100;
             }
         } else {
-            container.animate({"left": "-100%"}, "slow", complete=current_dot(dots, 2, 1));
+            $(container).animate({"left": "-100%"}, "slow", complete=current_dot(dots, 2, 1));
             current = 0, is_done = false;
         }
     }, 3500);
