@@ -59,13 +59,13 @@ body {
   width: 100%;
 }
 .hero .slider-container div:nth-child(1) {
-  background: transparent url("/assets/img/slider-4-slide-1-1920x678.jpg") top center/cover no-repeat;
+  background: transparent url("assets/img/slider-4-slide-1-1920x678.jpg") top center/cover no-repeat;
 }
 .hero .slider-container div:nth-child(2) {
-  background: transparent url("/assets/img/slider-4-slide-2-1920x678.jpg") top center/cover no-repeat;
+  background: transparent url("assets/img/slider-4-slide-2-1920x678.jpg") top center/cover no-repeat;
 }
 .hero .slider-container div:nth-child(3) {
-  background: transparent url("/assets/img/slider-4-slide-3-1920x678.jpg") top center/cover no-repeat;
+  background: transparent url("assets/img/slider-4-slide-3-1920x678.jpg") top center/cover no-repeat;
 }
 .hero .slider-dots {
   position: relative;
