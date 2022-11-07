@@ -26,6 +26,7 @@ body {
 }
 
 .nav-wrapper {
+  width: 100%;
   background: transparent;
 }
 .nav-wrapper .nav-content {
@@ -146,6 +147,7 @@ body {
 .about-section .wrap-sides .container-left {
   text-align: justify;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  height: 60%;
   width: 50%;
 }
 .about-section .wrap-sides .container-right {
@@ -181,9 +183,12 @@ body {
   }
 }
 @media (max-width: 800px) {
-  .navbar {
+  #navbar {
     background: #212529;
     padding: 1rem 0;
+  }
+  #navbar .nav-content {
+    width: 80%;
   }
   .slider-content p {
     font-size: 1rem;
