@@ -54,6 +54,7 @@ body header {
 
 .hero {
   height: 85%;
+  overflow: hidden;
 }
 .hero .slider-container {
   position: relative;
@@ -167,21 +168,22 @@ body header {
 .about-section .wrap-sides {
   display: flex;
   align-items: center;
-  justify-content: space-around !important;
+  justify-content: space-around;
+  align-content: space-between;
   height: 100%;
   width: 80%;
 }
 .about-section .wrap-sides .container-left {
   text-align: justify;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  height: 60%;
+  height: 50%;
   width: 45%;
 }
 .about-section .wrap-sides .container-right {
   position: relative;
   text-align: center;
   width: 45%;
-  height: 60%;
+  height: 50%;
   background: #212529 url("../img/picture.jpg") top center/cover no-repeat;
 }
 .about-section .wrap-sides .container-right:hover {
@@ -219,13 +221,11 @@ body header {
     flex-direction: column;
   }
   .about-section .wrap-sides .container-left {
-    height: 50%;
     width: 90%;
     padding: 1rem 1rem;
     margin: 0 0 1rem;
   }
   .about-section .wrap-sides .container-right {
-    height: 50%;
     width: 90%;
   }
 }
@@ -247,13 +247,11 @@ body header {
     flex-direction: column;
   }
   .about-section .wrap-sides .container-left {
-    height: 50%;
     width: 60%;
     padding: 1rem 1rem;
     margin: 0 0 1rem;
   }
   .about-section .wrap-sides .container-right {
-    height: 50%;
     width: 60%;
   }
 }
@@ -274,13 +272,11 @@ body header {
     flex-direction: column;
   }
   .about-section .wrap-sides .container-left {
-    height: 50%;
     width: 55%;
     padding: 1rem 1rem;
     margin: 0 0 1rem;
   }
   .about-section .wrap-sides .container-right {
-    height: 50%;
     width: 55%;
   }
 }
