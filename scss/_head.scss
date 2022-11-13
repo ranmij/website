@@ -10,9 +10,10 @@ body {
     width: 100vw;
     // line-height: 2rem;
     font-size: 1.2rem;
+    scroll-snap-type: y mandatory;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .reveal {
@@ -27,11 +28,18 @@ body {
     opacity: 1;
 }
 
+body header {
+    overflow-x:hidden !important;
+}
+
+.nav-wrapper, .about-section, footer {
+    scroll-snap-align: center;
+}
+
 .nav-wrapper {
-    width: 100%;
-    background: transparent;
+    width: 100vw !important;
     & .nav-content {
-        width: 80%;
+        width: 80% !important;
     }
 
     & .navbar-brand img {
@@ -57,7 +65,8 @@ body {
         display: flex;
         height: 100%;
         width: 300%;
-        animation: 30s slides infinite; 
+        -webkit-animation: 30s slides infinite;
+                animation: 30s slides infinite; 
     }
 
     & .slider-container > div {
@@ -109,7 +118,8 @@ body {
         & .slider-content h1 {
             margin: 0;
             font-weight: 600;
-            animation: fadeDown 2s;
+            -webkit-animation: fadeDown 2s;
+                    animation: fadeDown 2s;
         }
 
         & .slider-content a {
@@ -121,20 +131,43 @@ body {
         }
 
         & .slider-content p {
-            animation: fadeRight 1s;
+            -webkit-animation: fadeRight 1s;
+                    animation: fadeRight 1s;
         }
+    }
+}
+
+@-webkit-keyframes fadeDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
     }
 }
 
 @keyframes fadeDown {
     0% {
       opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
       transform: translate3d(0, -100%, 0);
     }
     100% {
       opacity: 1;
-      -webkit-transform: none;
+      transform: none;
+    }
+}
+
+
+@-webkit-keyframes fadeRight {
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
       transform: none;
     }
 }
@@ -143,13 +176,11 @@ body {
 @keyframes fadeRight {
     from {
       opacity: 0;
-      -webkit-transform: translate3d(100%, 0, 0);
       transform: translate3d(100%, 0, 0);
     }
   
     to {
       opacity: 1;
-      -webkit-transform: none;
       transform: none;
     }
 }

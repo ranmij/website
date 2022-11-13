@@ -8,9 +8,10 @@ body {
   height: 100vh;
   width: 100vw;
   font-size: 1.2rem;
+  scroll-snap-type: y mandatory;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .reveal {
@@ -25,12 +26,19 @@ body {
   opacity: 1;
 }
 
+body header {
+  overflow-x: hidden !important;
+}
+
+.nav-wrapper, .about-section, footer {
+  scroll-snap-align: center;
+}
+
 .nav-wrapper {
-  width: 100%;
-  background: transparent;
+  width: 100vw !important;
 }
 .nav-wrapper .nav-content {
-  width: 80%;
+  width: 80% !important;
 }
 .nav-wrapper .navbar-brand img {
   width: 80px;
@@ -53,6 +61,7 @@ body {
   display: flex;
   height: 100%;
   width: 300%;
+  -webkit-animation: 30s slides infinite;
   animation: 30s slides infinite;
 }
 .hero .slider-container > div {
@@ -96,6 +105,7 @@ body {
 .hero .content-wrap .slider-content h1 {
   margin: 0;
   font-weight: 600;
+  -webkit-animation: fadeDown 2s;
   animation: fadeDown 2s;
 }
 .hero .content-wrap .slider-content a {
@@ -106,30 +116,47 @@ body {
   border: 2px solid #fff;
 }
 .hero .content-wrap .slider-content p {
+  -webkit-animation: fadeRight 1s;
   animation: fadeRight 1s;
 }
 
-@keyframes fadeDown {
+@-webkit-keyframes fadeDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
     transform: none;
   }
 }
 @keyframes fadeRight {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -140,7 +167,7 @@ body {
 .about-section .wrap-sides {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around !important;
   height: 100%;
   width: 80%;
 }
@@ -148,10 +175,9 @@ body {
   text-align: justify;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   height: 60%;
-  width: 50%;
+  width: 45%;
 }
 .about-section .wrap-sides .container-right {
-  display: none;
   position: relative;
   text-align: center;
   width: 45%;
@@ -162,16 +188,6 @@ body {
   opacity: 0.5;
 }
 
-@keyframes showpic {
-  0% {
-    right: -100%;
-    transform: rotate(180deg);
-  }
-  100% {
-    right: 0%;
-    transform: rotate(0deg);
-  }
-}
 @keyframes hidepic {
   0% {
     right: 0%;
@@ -182,34 +198,90 @@ body {
     transform: rotate(180deg);
   }
 }
-@media (max-width: 800px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   #navbar {
     background: #212529;
     padding: 1rem 0;
   }
-  #navbar .nav-content {
-    width: 80%;
-  }
   .slider-content p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .slider-content a {
     font-size: 1rem;
     padding: 0.5rem;
   }
+  .about-section {
+    background: red;
+  }
   .about-section .wrap-sides {
-    font-size: 0.8rem;
-    align-content: space-around;
-    height: 100%;
+    font-size: 1rem;
     width: 100%;
     flex-direction: column;
   }
   .about-section .wrap-sides .container-left {
     height: 50%;
+    width: 90%;
+    padding: 1rem 1rem;
+    margin: 0 0 1rem;
   }
   .about-section .wrap-sides .container-right {
-    height: 40%;
-    width: 50%;
+    height: 50%;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #navbar {
+    background: #212529;
+    padding: 1rem 0;
+  }
+  .slider-content a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .about-section {
+    background: yellow;
+  }
+  .about-section .wrap-sides {
+    font-size: 1rem;
+    width: 100%;
+    flex-direction: column;
+  }
+  .about-section .wrap-sides .container-left {
+    height: 50%;
+    width: 60%;
+    padding: 1rem 1rem;
+    margin: 0 0 1rem;
+  }
+  .about-section .wrap-sides .container-right {
+    height: 50%;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #navbar {
+    background: #212529;
+    padding: 1rem 0;
+  }
+  .slider-content a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .about-section {
+    background: green;
+  }
+  .about-section .wrap-sides {
+    width: 100%;
+    flex-direction: column;
+  }
+  .about-section .wrap-sides .container-left {
+    height: 50%;
+    width: 55%;
+    padding: 1rem 1rem;
+    margin: 0 0 1rem;
+  }
+  .about-section .wrap-sides .container-right {
+    height: 50%;
+    width: 55%;
   }
 }
 

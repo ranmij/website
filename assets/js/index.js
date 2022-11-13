@@ -20,6 +20,7 @@ jQuery(function() {
     /*
      * Animation for scrolling
     */
+   let down = 0, up = 0;
     $(window).on("scroll", function() {
         let nav = $("#navbar");
         if ($("html").scrollTop() !== 0) {
@@ -38,13 +39,13 @@ jQuery(function() {
             } else {
                 $(elements[i]).removeClass('active');
             }
-            if (right.getBoundingClientRect().top < height - visible) {
-                $(right).css({'display':'block', 'animation': 'showpic 1s'});
-                // right.addClass('active');
-            } else {
-                $(right).css({'animation':'hidepic 1s'});
-                // right.removeClass('active');
-            }
+            // if (right.getBoundingClientRect().top < height - visible) {
+            //     $(right).css({'display':'block', 'animation': 'showpic 1s'});
+            //     // right.addClass('active');
+            // } else {
+            //     $(right).css({'animation':'hidepic 1s'});
+            //     // right.removeClass('active');
+            // }
 
         }
     });
