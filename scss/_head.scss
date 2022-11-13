@@ -49,6 +49,7 @@ body header {
     & li {
         padding: .5rem;
         a {
+            background: none;
             font-weight: 500;
             color: $primary-white;
             text-transform: uppercase;
