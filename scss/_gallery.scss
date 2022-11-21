@@ -14,11 +14,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: .5rem;
-    grid-template-areas:
-        "img-1 img-2 img-3 img-4"
-        "img-8 img-7 img-6 img-5"
-        "img-12 img-11 img-10 img-9"
-    ;
     width: $max-width;
 }
 
