@@ -369,5 +369,23 @@ body header {
 .gallery-caption {
   text-align: center;
   height: 100%;
-  width: 50%;
+}
+.gallery-caption h2 {
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  .gallery-caption h2 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .gallery-caption h2 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1134px) {
+  .gallery-caption h2 {
+    font-size: 1.3rem;
+  }
 }/*# sourceMappingURL=style.css.map */
