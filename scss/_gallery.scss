@@ -16,19 +16,6 @@
     grid-gap: .5rem;
     width: $max-width;
 }
-
-.gallery-container .img {
-    height: $max-height;
-    width: $max-width;
-
-}
-
-@for $i  from 1 through 12 {
-        .gallery-container img:nth-child(#{$i}) {
-            grid-area: img-#{$i};
-        } 
-}
-
 .gallery-caption {
     text-align: center;
     height: $max-height;
