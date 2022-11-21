@@ -8,54 +8,21 @@
 body {
     height: 100vh;
     width: 100vw;
-    // line-height: 2rem;
-    font-size: 1.2rem;
-    scroll-snap-type: y mandatory;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-y: scroll;
     overflow-x: hidden !important;
 }
 
 .reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
+    @include mixins.reveal;
 }
 
 .active {
-    transform: translateY(0);
-    opacity: 1;
+    @include mixins.active;
 }
 
 body header {
     overflow-x:hidden !important;
-}
-
-.nav-wrapper, .about-section, footer {
-    scroll-snap-align: center;
-}
-
-.nav-wrapper {
-    width: 100vw !important;
-    & .nav-content {
-        width: 80% !important;
-    }
-
-    & .navbar-brand img {
-        width: 80px;
-    }
-
-    & li {
-        padding: .5rem;
-        a {
-            background: none;
-            font-weight: 500;
-            color: $primary-white;
-            text-transform: uppercase;
-        }
-    }
-
 }
 
 .hero {
@@ -65,15 +32,15 @@ body header {
         position: relative;
         left: 0;
         display: flex;
-        height: 100%;
+        height: $max-height;
         width: 300%;
         -webkit-animation: 30s slides infinite;
                 animation: 30s slides infinite; 
     }
 
     & .slider-container > div {
-        height: 100%;
-        width: 100%;
+        height: $max-height;
+        width: $max-width;
     }
 
     & .slider-container div:nth-child(1) {
@@ -102,7 +69,7 @@ body header {
         }
 
         & div .active {
-            background: #3BACB6;
+            background: $secondary-color;
         }
     }
 
@@ -111,14 +78,14 @@ body header {
         position: absolute;
         top: 0;
         height: inherit;
-        width: 100%;
+        width: $max-width;
 
         & .slider-content {
-            width: 80%;
+            width: $center-width;
         }
 
         & .slider-content h1 {
-            margin: 0;
+            letter-spacing: 2px;
             font-weight: 600;
             -webkit-animation: fadeDown 2s;
                     animation: fadeDown 2s;
@@ -129,10 +96,11 @@ body header {
             color: $primary-white;
             text-decoration: none;
             padding: .8rem;
-            border: 2px solid $primary-white;
+            border: 1px solid $primary-white;
         }
 
         & .slider-content p {
+            letter-spacing: 2px;
             -webkit-animation: fadeRight 1s;
                     animation: fadeRight 1s;
         }

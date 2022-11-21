@@ -4,3 +4,15 @@
     box-sizing: border-box;
 };
 
+
+@mixin reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+@mixin active {
+    transform: translateY(0);
+    opacity: 1;
+}

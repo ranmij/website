@@ -7,9 +7,6 @@
 body {
   height: 100vh;
   width: 100vw;
-  font-size: 1.2rem;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: scroll;
   overflow-x: hidden !important;
@@ -29,29 +26,6 @@ body {
 
 body header {
   overflow-x: hidden !important;
-}
-
-.nav-wrapper, .about-section, footer {
-  scroll-snap-align: center;
-}
-
-.nav-wrapper {
-  width: 100vw !important;
-}
-.nav-wrapper .nav-content {
-  width: 80% !important;
-}
-.nav-wrapper .navbar-brand img {
-  width: 80px;
-}
-.nav-wrapper li {
-  padding: 0.5rem;
-}
-.nav-wrapper li a {
-  background: none;
-  font-weight: 500;
-  color: #fff;
-  text-transform: uppercase;
 }
 
 .hero {
@@ -106,7 +80,7 @@ body header {
   width: 80%;
 }
 .hero .content-wrap .slider-content h1 {
-  margin: 0;
+  letter-spacing: 2px;
   font-weight: 600;
   -webkit-animation: fadeDown 2s;
   animation: fadeDown 2s;
@@ -116,9 +90,10 @@ body header {
   color: #fff;
   text-decoration: none;
   padding: 0.8rem;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
 }
 .hero .content-wrap .slider-content p {
+  letter-spacing: 2px;
   -webkit-animation: fadeRight 1s;
   animation: fadeRight 1s;
 }
@@ -163,6 +138,43 @@ body header {
     transform: none;
   }
 }
+.nav-wrapper {
+  width: 100vw !important;
+}
+.nav-wrapper .nav-content {
+  width: 80% !important;
+}
+.nav-wrapper .navbar-brand img {
+  width: 80px;
+}
+.nav-wrapper li {
+  padding: 0.5rem;
+}
+.nav-wrapper li a {
+  background: none;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  #navbar {
+    background: #212529;
+    padding: 1rem 0;
+  }
+  .navbar-brand img {
+    width: 50px !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #navbar {
+    background: #212529;
+    padding: 1rem 0;
+  }
+  .navbar-brand img {
+    width: 50px !important;
+  }
+}
 .about-section {
   height: 100%;
   background: #EDE9E8;
@@ -179,7 +191,7 @@ body header {
 }
 .about-section .wrap-sides .container-left {
   text-align: justify;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 10px 36px 0px, rgba(0, 0, 0, 0.0588235294) 0px 0px 0px 1px;
   height: 50%;
   width: 45%;
 }
@@ -219,10 +231,6 @@ body header {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 575px) {
-  #navbar {
-    background: #212529;
-    padding: 1rem 0;
-  }
   .slider-content p {
     font-size: 0.8rem;
   }
@@ -246,10 +254,6 @@ body header {
   }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
-  #navbar {
-    background: #212529;
-    padding: 1rem 0;
-  }
   .slider-content a {
     font-size: 1rem;
     padding: 0.5rem;
@@ -290,4 +294,80 @@ body header {
   .about-section .wrap-sides .container-right {
     width: 55%;
   }
+}
+.content-container {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0.5rem;
+  grid-template-areas: "img-1 img-2 img-3 img-4" "img-8 img-7 img-6 img-5" "img-12 img-11 img-10 img-9";
+  width: 100%;
+}
+
+.gallery-container .img {
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-container img:nth-child(1) {
+  grid-area: img-1;
+}
+
+.gallery-container img:nth-child(2) {
+  grid-area: img-2;
+}
+
+.gallery-container img:nth-child(3) {
+  grid-area: img-3;
+}
+
+.gallery-container img:nth-child(4) {
+  grid-area: img-4;
+}
+
+.gallery-container img:nth-child(5) {
+  grid-area: img-5;
+}
+
+.gallery-container img:nth-child(6) {
+  grid-area: img-6;
+}
+
+.gallery-container img:nth-child(7) {
+  grid-area: img-7;
+}
+
+.gallery-container img:nth-child(8) {
+  grid-area: img-8;
+}
+
+.gallery-container img:nth-child(9) {
+  grid-area: img-9;
+}
+
+.gallery-container img:nth-child(10) {
+  grid-area: img-10;
+}
+
+.gallery-container img:nth-child(11) {
+  grid-area: img-11;
+}
+
+.gallery-container img:nth-child(12) {
+  grid-area: img-12;
+}
+
+.gallery-caption {
+  text-align: center;
+  height: 100%;
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

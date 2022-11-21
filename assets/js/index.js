@@ -39,13 +39,6 @@ jQuery(function() {
             } else {
                 $(elements[i]).removeClass('active');
             }
-            // if (right.getBoundingClientRect().top < height - visible) {
-            //     $(right).css({'display':'block', 'animation': 'showpic 1s'});
-            //     // right.addClass('active');
-            // } else {
-            //     $(right).css({'animation':'hidepic 1s'});
-            //     // right.removeClass('active');
-            // }
 
         }
     });
@@ -76,4 +69,6 @@ jQuery(function() {
             current = 0, is_done = false;
         }
     }, 3500);
+
+    
 });
