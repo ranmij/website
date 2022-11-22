@@ -11,7 +11,7 @@ body {
   overflow-x: hidden;
 }
 
-body > section {
+body section {
   padding: 1rem 2rem;
 }
 
@@ -75,15 +75,52 @@ section > div {
 
 @media screen and (min-width: 576px) and (max-width: 848px) {
   .img-c {
-    grid-template-columns: 1fr !important;
-    justify-items: center;
-    width: 50%;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .img-w img {
+    height: 100px !important;
+    width: 150px;
+  }
+  .reg-c div:nth-child(2) {
+    width: 100%;
+  }
+  .reg-c div:nth-child(3) {
+    width: 80%;
   }
 }
 @media screen and (min-width: 849px) and (max-width: 1264px) {
   .img-c {
     grid-template-columns: 1fr 1fr !important;
+  }
+  .img-w img {
+    width: 250px;
+  }
+  .reg-c div:nth-child(2) {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  body section {
+    padding: 0;
+  }
+  section > div {
+    width: 100%;
+  }
+  .img-c {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .regions {
+    width: 100%;
+  }
+  .img-w img {
+    height: 80px !important;
+    width: 120px;
+  }
+  .reg-c div:nth-child(2) {
+    width: 100%;
+  }
+  .reg-c div:nth-child(3) {
+    width: 80%;
   }
 }
 .nav-wrapper {
