@@ -151,6 +151,7 @@ body header {
   padding: 0.5rem;
 }
 .nav-wrapper li a {
+  opacity: 1;
   background: none;
   font-weight: 500;
   color: #fff;
@@ -162,6 +163,9 @@ body header {
     background: #212529;
     padding: 1rem 0;
   }
+  .nav-c li a {
+    color: #212529;
+  }
   .navbar-brand img {
     width: 50px !important;
   }
@@ -172,6 +176,7 @@ body header {
     padding: 1rem 0;
   }
   .navbar-brand img {
+    opacity: 1 !important;
     width: 50px !important;
   }
 }
@@ -387,5 +392,78 @@ body header {
 @media screen and (min-width: 769px) and (max-width: 1134px) {
   .gallery-caption h2 {
     font-size: 1.3rem;
+  }
+}
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.boxes {
+  font-weight: lighter;
+}
+.boxes div {
+  width: 33.3%;
+}
+.boxes div:nth-child(1) {
+  padding: 0.5rem;
+}
+.boxes div:nth-child(1) h5 {
+  font-size: 1.3rem;
+}
+.boxes div:nth-child(1) p {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+.boxes div:nth-child(2) {
+  padding: 0.5rem 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.boxes div:nth-child(2) span {
+  display: block;
+  width: 50%;
+}
+
+.bottom-view section {
+  padding: 0;
+}
+.bottom-view .b-c {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.bottom-view .b-c span {
+  display: block;
+}
+.bottom-view section a {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+}
+.bottom-view section a i {
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .boxes {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  .bottom-view section {
+    padding: 1rem 0;
+  }
+  .boxes {
+    display: none !important;
+  }
+  .b-c {
+    flex-direction: column;
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */

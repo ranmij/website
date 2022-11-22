@@ -1,6 +1,7 @@
 @use 'variables' as *;
 .nav-wrapper {
     width: 100vw !important;
+
     & .nav-content {
         width: $center-width !important;
     }
@@ -12,6 +13,7 @@
     & li {
         padding: .5rem;
         a {
+            opacity: 1;
             background: none;
             font-weight: 500;
             color: $primary-white;
@@ -25,6 +27,11 @@
         background: $primary-dark;
         padding: 1rem 0;
     }
+
+    .nav-c li a {
+        color:$primary-dark;
+    }
+
     .navbar-brand img {
         width: $small-brand-ic !important;
     }
@@ -35,8 +42,8 @@
         background: $primary-dark;
         padding: 1rem 0;
     }
-
     .navbar-brand img {
+        opacity: 1 !important;
         width: $small-brand-ic !important;
     }
 }
