@@ -132,7 +132,7 @@ section > div {
   opacity: 1;
   background: none;
   font-weight: 500;
-  color: #fff;
+  color: #212529;
   text-transform: uppercase;
 }
 
@@ -140,9 +140,6 @@ section > div {
   #navbar {
     background: #212529;
     padding: 1rem 0;
-  }
-  .nav-c li a {
-    color: #212529;
   }
   .navbar-brand img {
     width: 50px !important;

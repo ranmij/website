@@ -16,7 +16,7 @@
             opacity: 1;
             background: none;
             font-weight: 500;
-            color: $primary-white;
+            color: $primary-dark;
             text-transform: uppercase;
         }
     }
@@ -26,10 +26,6 @@
     #navbar {
         background: $primary-dark;
         padding: 1rem 0;
-    }
-
-    .nav-c li a {
-        color:$primary-dark;
     }
 
     .navbar-brand img {
