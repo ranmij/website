@@ -16,7 +16,7 @@
             opacity: 1;
             background: none;
             font-weight: 500;
-            color: $primary-dark;
+            color: $primary-white;
             text-transform: uppercase;
         }
     }
@@ -39,7 +39,6 @@
         padding: 1rem 0;
     }
     .navbar-brand img {
-        opacity: 1 !important;
         width: $small-brand-ic !important;
     }
 }

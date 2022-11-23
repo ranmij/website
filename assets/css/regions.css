@@ -139,7 +139,7 @@ section > div {
   opacity: 1;
   background: none;
   font-weight: 500;
-  color: #212529;
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -158,7 +158,6 @@ section > div {
     padding: 1rem 0;
   }
   .navbar-brand img {
-    opacity: 1 !important;
     width: 50px !important;
   }
 }
