@@ -72,6 +72,10 @@ section > div {
   text-align: center;
   text-transform: uppercase;
 }
+.content-box .img-w p a {
+  text-decoration: none;
+  color: #212529;
+}
 
 @media screen and (min-width: 576px) and (max-width: 848px) {
   .img-c {
