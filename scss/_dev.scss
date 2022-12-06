@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+.devs {
+    display: flex;
+    height: 80vh;
+    width: $max-width;
+    margin: 0 auto;
+    padding: 1rem 0;
+    justify-content: space-around;
+    align-items: center;
+
+    & .left {
+        height: 70%;
+        width: 35%;
+    }
+
+    & .right {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        height: 80%;
+        width: 45%;
+    }
+
+    & .right img, & .right div img {
+        height: 140px;
+        width: 140px;
+        border-radius: 100%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    & .right .last span {
+        position: relative;
+    }
+}

@@ -195,6 +195,16 @@ section > div {
   display: block;
   width: 50%;
 }
+.boxes div:nth-child(2) span:hover {
+  color: orangered;
+}
+.boxes div:nth-child(2) span a {
+  text-decoration: none;
+  color: #fff;
+}
+.boxes div:nth-child(2) span a:hover {
+  color: orangered;
+}
 
 .bottom-view section {
   padding: 0;
